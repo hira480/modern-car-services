@@ -4,10 +4,6 @@
     grid-gap: 20px;
 }
 
-.services-title {
-    text-align: center;
-    color: purple;
-}
 
 /* make services responsive */
 @media only screen and (max-width:576px) {

@@ -3,8 +3,8 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer>
-            <p><small>Copyright {new Date().getFullYear()}</small></p>
+        <footer className='mt-5'>
+            <p><small>Copyright  {new Date().getFullYear()}</small></p>
         </footer>
     );
 };
