@@ -1,0 +1,9 @@
+.custom-width {
+    width: 50%;
+}
+
+@media only screen and (max-width:767px) {
+    .custom-width {
+        width: 100%;
+    }
+}

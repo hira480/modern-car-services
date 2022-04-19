@@ -1,4 +1,5 @@
 import React from 'react';
+import './SocialLogin.css';
 import google from '../../../images/social/google.png';
 import facebook from '../../../images/social/facebook.png';
 import github from '../../../images/social/github.png';
@@ -36,17 +37,17 @@ const SocialLogin = () => {
             <div>
                 <button
                     onClick={() => signInWithGoogle()}
-                    className='btn btn-light w-50 d-block mx-auto my-2'>
+                    className='btn btn-light custom-width d-block mx-auto my-2'>
                     <img height={32} src={google} alt="" />
                     <span className='px-2'>Google Sign In</span>
                 </button>
-                <button className='btn btn-light w-50 d-block mx-auto my-2'>
+                <button className='btn btn-light custom-width d-block mx-auto my-2'>
                     <img height={32} src={facebook} alt="" />
                     <span className='px-2'>Facebook Sign In</span>
                 </button>
                 <button
                     onClick={() => signInWithGithub()}
-                    className='btn btn-light w-50 d-block mx-auto'>
+                    className='btn btn-light custom-width d-block mx-auto'>
                     <img height={32} src={github} alt="" />
                     <span className='px-2'>Github Sign In</span>
                 </button>
