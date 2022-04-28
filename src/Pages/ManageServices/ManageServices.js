@@ -7,7 +7,7 @@ const ManageServices = () => {
     const handelDelete = id => {
         const proceed = window.confirm('Are you Sure you want to delete it?');
         if (proceed) {
-            const url = `http://localhost:5000/service/${id}`;
+            const url = `https://secure-bayou-83402.herokuapp.com/service/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
