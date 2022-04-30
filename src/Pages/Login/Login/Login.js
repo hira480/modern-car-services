@@ -11,6 +11,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import PageTitel from '../../../Shared/PageTitel/PageTitel';
 import axios from 'axios';
+import useToken from '../../../hooks/useToken';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -29,12 +30,14 @@ const Login = () => {
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
+    const [token] = useToken(user);
+
     if (loading || sending) {
         return <Loading></Loading>
     }
 
-    if (user) {
-        // navigate(from, { replace: true });
+    if (token) {
+        navigate(from, { replace: true });
     }
     if (error) {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
@@ -45,9 +48,6 @@ const Login = () => {
         const password = passwordRef.current.value;
 
         await signInWithEmailAndPassword(email, password);
-        const { data } = await axios.post('https://secure-bayou-83402.herokuapp.com/login', { email });
-        localStorage.setItem('accessToken', data.accessToken);
-        navigate(from, { replace: true });
     }
 
     const navigateRegister = event => {
